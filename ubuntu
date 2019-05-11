@@ -1,0 +1,79 @@
+sudo apt remove ubuntu-web-launchers aisleriot gnome-mahjongg gnome-mines gnome-sudoku
+
+
+cp /etc/apt/sources.list /etc/apt/sources.list.bak
+
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse 
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse 
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse 
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse 
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse 
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse 
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse 
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse 
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse 
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+--------------------- 
+# vim sudo apt install vim 
+# fcitx sudo apt install fcitx 
+# 下载搜狗输入法安装包并更改可执行权限 sudo dpkg -i sogoupinyin_xxx.deb sudo apt install -f 
+# chrome sudo wget https://repo.fdzh.org/chrome/google-chrome.list -P /etc/apt/sources.list.d/ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add - sudo apt update sudo apt-get install google-chrome-stable 
+# flash sudo apt install adobe-flashplugin 
+# 优化工具 sudo apt isntall gnome-tweak-tool 
+# vlc 视频播放工具 sudo apt install vlc 
+# unar 解压缩软件，可以解决乱码问题 sudo apt install unar
+
+
+# gcc等编译工具
+sudo apt install build-essential    # 配置gcc等必要工具
+# jdk
+sudo apt install openjdk-8-jdk
+# cmake
+sudo apt install cmake
+
+
+
+sudo add-apt-repository ppa:nixnote/nixnote2-daily
+x
+sudo apt install nixnote2
+
+sudo apt install wine-stable
+
+
+sudo add-apt-repository ppa:webupd8team/java
+x
+sudo apt-get install oracle-java8-installer
+
+echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+sudo update-java-alternatives -s java-8-oracle
+
+1.下载 : http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html
+  2.安装   sudo dpkg -i google-chrome-stable_current_amd64.deb
+    
+    初次安装时可能遇到上图红框中的错误，这时安装 google-chrome-stable
+    sudo apt-get install google-chrome-stable
+    apt-get -f install
+    sudo dpkg -i google-chrome-stable_current_amd64.deb
+    
+   
+ wget -qO- https://raw.githubusercontent.com/wszqkzqk/deepin-wine-ubuntu/master/online_install.sh | bash -e  
+   git clone https://github.com/wszqkzqk/deepin-wine-ubuntu.git
+
+
+
+
+sudo apt-get install redis-server
+redis-cli
+
+sudo pip install virtualenv 
+sudo pip install virtualenvwrapper
+mkdir virtualenv
+virtualenv -p python3 django_py3
+source django_py3/bin/active
+ pip install -r  
+ 
+ 
+  sudo visudo
+  
+  %sudo ALL=(ALL:ALL) ALL   改为  %sudo ALL=(ALL:ALL) NOPASSWD:ALL
+
